@@ -419,10 +419,13 @@
         <div class="content__inner" id="tab-4">
         <div class="page">
             <h2>Работа с функциями</h2>
+            
+            <p class="text">Внешние переменные/Глобальные переменные, объявляются в начале файла</p>
+            <p class="example">let message = ...; function name() { }</p>
+
             <p class="text">Локальные переменные</p>
             <p class="example">function name() {let message = ...}</p>
-            <p class="text">Внешние переменные/Глобальные переменные</p>
-            <p class="example">let message = ...; function name() { }</p>
+
             <p class="text">Возврат значения:</p>
             <p class="example">function sum(a, b) { return a + b; }</p>
 
@@ -435,17 +438,18 @@
             <p class="example">const f = function(параметры) {тело функции}</p>
 
             <h2>Arrow Function (стрелочная функция)</h2>
-            <p class="example">const ShowNumberArrow = function () => {console.log(1)}</p>
-            <p class="hint">const ShowNumberArrow = () => console.log(1) // сокращенная запись</p>
-            <p class="hint">let ShowNumber6 = (g) => {return g * 3} // если с {} то return</p>
-            <p class="hint">user.sayHi = () => console.log('hi') // все что перед = и есть название функции</p>
-
-            <h3>Анонимная стрелочная функция</h3>
             <p class="text"></p>
+            <p class="example">const ShowNumberArrow = function () => {console.log(1)}</p>
+            <p class="hint">const ShowNumberArrow = () => console.log(1) //сокращенная запись в одну строку</p>
+            <p class="hint">let ShowNumber6 = (g) => {return g * 3} //если с {} то return</p>
+            <p class="hint">user.sayHi = () => console.log('hi') //все что перед = и есть название функции</p>
+
+            <h3>Анонимная функция</h3>
+            <p class="text">Анонимная функция -  это функция без имени: function () {}</p>
             <p class="example">newArray.forEach((element, index) => console.log(element[index]))</p>
 
             <h2>Функции -«колбэки»</h2>
-            <p class="text"></p>
+            <p class="text">Колбэк-функция (или обратный вызов) - это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.</p>
             <p class="example">function ask(question, yes, no) {
                 //   if (confirm(question)) yes()
                 //   else no()}</p>
@@ -490,7 +494,7 @@
 
             <h2>Тернарный опертор</h2>
             <p class="text">условие ? значение1 : значение2</p>
-            <p class="example">(age >= 18) ? access = true : access = false;</p>
+            <p class="example">let accessAllowed = age > 18 ? true : false</p>
 
         </div>
         </div>
