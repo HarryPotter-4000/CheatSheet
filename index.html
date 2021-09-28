@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <input class="variation" id="solid" type="radio" value="1" name="border" checked="checked"/>
+    <label for="solid"><span class="circle"></span><span>Flat UI</span></label>
+    <input class="variation" id="shadow" type="radio" value="2" name="border"/>
+    <label for="shadow"> <span class="circle"></span><span>Realistic</span></label>
+    <div class="folder">
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'tab-1')">
+        <div><span>String</span></div>
+        </button>
+        <button class="tab" onclick="openTab(event, 'tab-2')">
+        <div><span>Object</span></div>
+        </button>
+        <button class="tab" onclick="openTab(event, 'tab-3')">
+        <div><span>Array</span></div>
+        </button>
+        <button class="tab" onclick="openTab(event, 'tab-4')">
+        <div><span>Function</span></div>
+        </button>
+    </div>
+    <div class="content">
+        <div class="content__inner" id="tab-1">
+        <div class="page">
+            <h2>toLowerCase()</h2>
+            <p class="text">Преобразует символы в строке в нижний регистр.</p>
+            <p class="example">"Hello Tproger".toLowerCase(); // "hello tproger"</p>
+
+            <h2>toUpperCase()</h2>
+            <p class="text">Преобразует символы в строке в нижний регистр.</p>
+            <p class="example">"Hello Tproger".toUpperCase(); // "HELLO TPROGER"</p>
+
+            <h2>concat()</h2>
+            <p class="text">Объединяет две или более строки и возвращает одну строку.</p>
+            <p class="example">"Hello".concat(" Tproger"); // "Hello Tproger"</p>
+
+            <h2>split()</h2>
+            <p class="text">Разбивает строку в массив</p>
+            <p class="example">"Hello Tproger".split(" "); //["Hello", "Tproger"]</p>
+
+            <h2>join()</h2>
+            <p class="text">объединяет элементы массива в строку массив.join([разделитель]</p>
+            <p class="example">str.split('').reverse().join('')</p>
+            
+            <h2>repeat()</h2>
+            <p class="text">Принимает в качестве параметра число и повторяет строку указанное количество раз.</p>
+            <p class="example"> "Tproger ".repeat(3); // "Tproger Tproger Tproger "</p>
+
+            <h2>includes()</h2>
+            <p class="text">Проверяет, содержит ли строка указанную подстроку.</p>
+            <p class="example">"Hello Tproger".includes("Tproger"); // true</p>
+
+            <h2>indexOf()</h2>
+            <p class="text">Возвращает индекс первого найденного вхождения указанного значения. </p>
+            <p class="example">"Hello World".indexOf("o"); // 4</p>
+
+            <h2>lastIndexOf()</h2>
+            <p class="text">Возвращает индекс последнего найденного вхождения указанного значения.</p>
+            <p class="example"> "Tproger ".repeat(3); // "Tproger Tproger Tproger "</p>
+
+            <h2>endsWith()</h2>
+            <p class="text">Проверяет, заканчивается ли строка символами, заданными первым параметром.</p>
+            <p class="example">"Hello Tproger".endsWith("Tproger"); // true</p>
+
+            <h2>startsWith()</h2>
+            <p class="text">Проверяет, начинается ли строка с указанных символов.</p>
+            <p class="example">str.startsWith(searchString[, position])</p>
+
+            <h2>search()</h2>
+            <p class="text">Проверяет, есть ли в строке указанное значение или регулярное выражение и <span>возвращает индекс начала совпадения</span>.</p>
+            <p class="example">"hi, hello, hey".search("hello");//4</p>
+
+            <h2>slice()</h2>
+            <p class="text">Извлекает часть строки и <span>возвращает новую строку</span>.</p>
+            <p class="example">"Методы строк на Tproger".slice(16); // "Tproger"</p>
+
+            <h2>substring()</h2>
+            <p class="text">Извлекает символы из строки между двумя указанными индексами.</p>
+            <p class="example">"Методы строк на Tproger".substring(5, 2); // "тод"</p>
+
+            <h2>substr()</h2>
+            <p class="text">Извлекает часть строки указанной длины.</p>
+            <p class="example">"Методы строк на Tproger".substr(7, 5); // "строк"</p>
+
+            <h2>replace()</h2>
+            <p class="text">возвращает новую строку</p>
+            <p class="example">"hi, hello, hi".replace("hi", "hey"); // "hey, hello, hi"</p>
+
+            <h2>replaceAll()</h2>
+            <p class="text">Заменяет все найденные совпадения другой строкой или переданной функцией.</p>
+            <p class="example">"hi, hello, hi".replaceAll("hi", "hey"); // "hey, hello, hey"</p>
+
+            <h2>trim()</h2>
+            <p class="text">Обрезает пробелы с обоих концов строки.</p>
+            <p class="example">" Hello Tproger ".trim(); // "Hello Tproger"</p>
+
+            <h2>trimEnd()</h2>
+            <p class="text">Обрезает пробелы в конце строки</p>
+            <p class="example">"   Hello Tproger ".trimEnd(); // "   Hello Tproger"</p>
+
+            <h2>trimStart()</h2>
+            <p class="text">Обрезает пробелы в начале строки</p>
+            <p class="example">"   Hello Tproger ".trimStart(); // "Hello Tproger "</p>
+
+            <h2>padEnd</h2>
+            <p class="text">Добавляет в конце отступы, пока строка не достигнет длины, заданной первым параметром.</p>
+            <p class="example">"Hello Tproger".padEnd(20, "*"); // "Hello Tproger*******"</p>
+
+            <h2>padStart</h2>
+            <p class="text">Добавляет в начале отступы, пока строка не достигнет длины...</p>
+            <p class="example">"Hello Tproger".padStart(20, "*")</p>
+
+            <h2>charAt()</h2>
+            <p class="text">Возвращает символ по указанному индексу.</p>
+            <p class="example">"Hello Tproger".charAt(); // "H"</p>
+
+            <h2>charCodeAt()</h2>
+            <p class="text">Возвращает числовое значение Юникода по указанному индексу.</p>
+            <p class="example">"T".charCodeAt() // 84</p>
+
+            <h2>fromCharCode()</h2>
+            <p class="text">Преобразует числовые значения Юникода в читаемые символы.</p>
+            <p class="example">String.fromCharCode(72, 101, 108, 108, 111); // "Hello"</p>
+
+            <h2>localeCompare()</h2>
+            <p class="text">Сравнивает две строки и определяет являются ли они эквивалентными в текущем языковом стандарте.</p>
+            <p class="example">str.localeCompare(compareString[, locales[, options]])</p>
+
+            <h2>raw()</h2>
+            <p class="text">Возвращает необработанную строковую форму строки шаблона.</p>
+            <p class="example">String.raw(obj, ...substitutions)</p>
+
+            <h2>toLocaleLowerCase()</h2>
+            <p class="text">Преобразует строку в строчные буквы (нижний регистр) с учетом текущего языкового стандарта.</p>
+            <p class="example">str.toLocaleLowerString()</p>
+
+            <h2>toLocaleUpperCase()</h2>
+            <p class="text">Преобразует строку в заглавные буквы (верхний регистр) с учетом текущего языкового стандарта.</p>
+            <p class="example">str.toLocaleUpperString()</p>
+
+            <h2>valueOf()</h2>
+            <p class="text">Метод возвращает примитивное значение строкового объекта в виде строкового типа данных.</p>
+            <p class="example">string.valueOf()</p>
+
+            <h2>normalize()</h2>
+            <p class="text">Возвращает форму нормализации в стандарте кодирования символов Unicode (Юникод) для указанной строки.</p>
+            <p class="example">str.normalize([form])</p>
+
+            <h2>match()</h2>
+            <p class="text">Производит поиск по заданной строке с использованием регулярного выражения (глобальный объект RegExp) и возвращает массив, содержащий результаты этого поиска.</p>
+            <p class="example">string.match(); // возвращает массив с пустой строкой</p>
+        </div>
+        </div>
+        <div class="content__inner" id="tab-2">
+        <div class="page">
+            <h2>Работа с Объектами</h2>
+            <p class="text">Создание</p>
+            <p class="example">let user = new Object()</p>
+            <p class="example">let user = {}</p>
+
+            <p class="text">Получаем свойства объекта:</p>
+            <p class="example">user.name</p>
+            <p class="example">user['name']</p>
+
+            <p class="text">Удаляем свойства объекта:</p>
+            <p class="example">delete user.age</p>
+
+            <p class="text">Перебор всех свойств объекта:</p>
+            <p class="example">for (key in object) {}</p>
+
+            <h2>Object.assign()</h2>
+            <p class="text">Копирует значения из одного объекта в другой.</p>
+            <p class="example">let clone = Object.assign({}, user)</p>
+
+            <h2>Object.create()</h2>
+            <p class="text">Позволяет создавать новые объекты и соединять их с прототипами существующих объектов.</p>
+            <p class="example">const barista = Object.create(obj)</p>
+
+            <h2>Object.keys()</h2>
+            <p class="text">Создает массив ключей объекта.</p>
+            <p class="example">const keys = Object.keys(obj)</p>
+
+            <h2>Object.values()</h2>
+            <p class="text">Cоздает массив значений объекта.</p>
+            <p class="example">const values = Object.values(obj)</p>
+
+            <h2>Object.entries()</h2>
+            <p class="text">Cоздает вложенный массив пар «ключ-значение» объекта.</p>
+            <p class="example">const entries = Object.entries(obj);</p>
+
+            <h2>Object.freeze()</h2>
+            <p class="text">Предотвращает модификацию свойств и значений объекта и добавление или удаление свойств объекта.</p>
+            <p class="example">const newUser = Object.freeze(user)</p>
+
+            <h2>Object.seal()</h2>
+            <p class="text">Предотвращает добавление новых свойств объекта, но позволяет изменять существующие свойства.</p>
+            <p class="example">const newUser = Object.seal(user)</p>
+
+            <h2>Object.getPrototypeOf()</h2>
+            <p class="text">Используется для получения внутреннего скрытого [[Prototype]] объекта, также доступного через свойство __proto__.</p>
+            <p class="example">Object.getPrototypeOf(employees)</p>
+
+            <h2>hasOwnProperty()</h2>
+            <p class="text">Возвращает логическое значение, которое указывает на то содержит ли объект указанное cобственное (неунаследованное) свойство, или метод.</p>
+            <p class="example">obj.hasOwnProperty( prop )</p>
+
+            <h2>Object.getOwnPropertyNames(o)</h2>
+            <p class="text">Этот метод возвращает массив содержащий все имена своих свойств (перечисляемых и неперечисляемых) объектов.</p>
+            <p class="example">Object.getOwnPropertyNames(obj)</p>
+
+            <h2>getOwnPropertyDescriptors()</h2>
+            <p class="text">Позволяет возвратить объект, содержащий дескрипторы всех собственных (неунаследованных) свойств заданного объекта.</p>
+            <p class="example">Object.getOwnPropertyDescriptors(obj)</p>
+
+            <h2>getOwnPropertySymbols()</h2>
+            <p class="text">Возвращает массив, состоящий из всех символьных (Symbol) свойств переданного объекта (массив символов конкретного объекта).</p>
+            <p class="example">Object.getOwnPropertySymbols(obj)</p>
+
+            <h2>defineProperties()</h2>
+            <p class="text">Позволяет определить новые или изменить существующие свойства объекта, описывая их дескрипторами.</p>
+            <p class="example">{value: "validValue",writable: true,enumerable: true,configurable: true,}</p>
+
+            <h2>isExtensible()</h2>
+            <p class="text">Возвращает логическое значение, которое определяет является ли объект расширяемым (доступно добавление новых собственных свойств), или нет.</p>
+            <p class="example">Object.isExtensible(obj)</p>
+
+            <h2>isFrozen()</h2>
+            <p class="text">Позволяет вернуть логическое значение, которое определяет является ли объект нерасширяемым с недоступными для настройки и изменения свойствами.</p>
+            <p class="example">Object.isFrozen(obj)</p>
+
+            <h2>isPrototypeOf()</h2>
+            <p class="text">Про­ве­ря­ет существует ли указанный объ­ект в цепочке прототипов другого объекта, возвращая при этом логическое значение.</p>
+            <p class="example">prototypeObj.isPrototypeOf(obj)</p>
+
+            <h2>isSealed()</h2>
+            <p class="text">Возвращает логическое значение, которое определяет является ли объект нерасширяемым и с недоступными для настройки свойствами, или нет.</p>
+            <p class="example">Object.isSealed( obj )</p>
+
+            <h2>preventExtensions()</h2>
+            <p class="text">Позволяет сделать объект нерасширяемым (предотвращает добавление новых собственных (неунаследованных) свойств).</p>
+            <p class="example">Object.preventExtensions(obj)</p>
+
+            <h2>propertyIsEnumerable()</h2>
+            <p class="text">Возвращает логическое значение, которое определяет является ли указанное свойство или метод целевого объекта перечислимым.</p>
+            <p class="example">obj.propertyIsEnumerable(property)</p>
+
+            <h2>setPrototypeOf()</h2>
+            <p class="text">Позволяет установить или изменить прототип указанному объекту.</p>
+            <p class="example">Object.setPrototypeOf( obj, proto )</p>
+
+            <h2>Object.toLocaleString()</h2>
+            <p class="text">Возвращает строковое представление указанного объекта (возвращает результат вызова метода Object.toString()).</p>
+            <p class="example">obj.toLocaleString()</p>
+
+            <h2>Object.toString()</h2>
+            <p class="text">Возвращает строковое представление указанного объекта, он вызывается без аргументов и должен возвращать строковое значение.</p>
+            <p class="example">obj.toString()</p>
+
+            <h2>Object.valueOf()</h2>
+            <p class="text">Возвращает примитивное значение указанного объекта, он вызывается без аргументов.</p>
+            <p class="example">obj.valueOf()</p>
+
+            <h2>Object.is()</h2>
+            <p class="text">Определяет, являются ли два значения различимыми (то есть, одинаковыми).</p>
+            <p class="example">var isSame = Object.is(value1, value2)</p>
+        </div>
+        </div>
+        <div class="content__inner" id="tab-3">
+        <div class="page">
+            <h2>Работа с массивами</h2>
+            <p class="text">Создание</p>
+            <p class="example">let newArray = ['a', 'b']</p>
+
+            <p class="text">Доступ к элементу массива по индексу</p>
+            <p class="example">let element = array[0]</p>
+
+            <h2>length</h2>
+            <p class="text">Устанавливает или возвращает число элементов этого массива.</p>
+            <p class="example">arr.length</p>
+
+            <h2>pop()</h2>
+            <p class="text">Извлекает элемент из конца массива.</p>
+            <p class="example">array.pop()</p>
+
+            <h2>push()</h2>
+            <p class="text">Добавляет элементы в конец массива.</p>
+            <p class="example">array.push( element )</p>
+
+            <h2>shift()</h2>
+            <p class="text">Извлекает элемент из начала массива.</p>
+            <p class="example">array.shift()</p>
+
+            <h2>unshift()</h2>
+            <p class="text">Добавляет элементы в начало массива.</p>
+            <p class="example">array.unshift(element1, element2, ..., elementX)</p>
+
+            <h2>slice()</h2>
+            <p class="text">Он возвращает новый массив, в который копирует элементы, начиная с индекса start и до end (не включая end).</p>
+            <p class="example">arr.slice([start], [end])</p>
+
+            <h2>splice()</h2>
+            <p class="text">Умеет всё: добавлять, удалять и заменять элементы. Возвращает массив из удалённых элементов.</p>
+            <p class="example">arr.splice(index[, deleteCount, elem1, ..., elemN])</p>
+
+            <h2>fill()</h2>
+            <p class="text">Этот метод заполняет все элементы массива одинаковым значением, от начального индекса (по умолчанию 0) до конечного индекса (по умолчанию array.length).</p>
+            <p class="example">array.fill(value, start, end)</p>
+
+            <h2>join</h2>
+            <p class="text">Объединяет элементы массива в строку с указанным разделителем</p>
+            <p class="example">str.split('').reverse().join('')</p>
+
+            <h2>reverse()</h2>
+            <p class="text">Изменяет порядок элементов в массиве на обратный.</p>
+            <p class="example">array.reverse()</p>
+
+            <h2>toString()</h2>
+            <p class="text">Позволяет преобразовать и объединить все элементы массива в одно строковое значение.</p>
+            <p class="example">array.toString()</p>
+
+            <h2>toLocaleString()</h2>
+            <p class="text">Позволяет преобразовать и объединить все элементы массива в одно строковое значение.</p>
+            <p class="example">array.toLocaleString()</p>
+
+            <h2>map()</h2>
+            <p class="text">Метод возвращает новый массив, содержащий трансформированные значения обрабатываемого массива.</p>
+            <p class="example">var newArray = array.map(function( currentValue, index, arr))</p>
+
+            <h2>flat()</h2>
+            <p class="text">Этот метод принимает в качестве аргумента массив массивов и сглаживает вложенные массивы в массив верхнего уровня.</p>
+            <p class="example">var newArray = arr.flat(depth)</p>
+
+            <h2>flatMap()</h2>
+            <p class="text">Этот метод применяет функцию к каждому элементу массива, а затем складывает результат в новый массив.</p>
+            <p class="example">let newArray = arrayObject.flatMap(callback,thisArg)</p>
+
+            <h2>every()</h2>
+            <p class="text">Этот метод проверяет, удовлетворяют ли все элементы массива условию, заданному в передаваемой функции.</p>
+            <p class="example">array.every(function(currentValue, index, arr))</p>
+
+            <h2>some()</h2>
+            <p class="text">Этот метод проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции.</p>
+            <p class="example">array.some(function(currentValue, index, arr), thisValue)</p>
+
+            <h2>find()</h2>
+            <p class="text">Метод возвращает первый элемент массива, соответствующий заданному критерию.</p>
+            <p class="example">let result = arr.find(function(item, index, array) {
+                // если true - возвращается текущий элемент и перебор прерывается
+                // если все итерации оказались ложными, возвращается undefined})</p>
+
+            <h2>findIndex()</h2>
+            <p class="text">Метод вместо того, чтобы возвращать первый подходящий элемент массива, возвращает индекс такого элемента. </p>
+            <p class="example">array.findIndex(function(currentValue, index, arr))</p>
+
+            <h2>indexOf</h2>
+            <p class="text">Он принимает в качестве аргумента не функцию, а обычное значение.</p>
+            <p class="example">arr.indexOf(item, from)/arr.lastIndexOf(item, from)</p>
+
+            <h2>includes()</h2>
+            <p class="text">Этот метод возвращает значение true, если массив содержит определенный элемент, и значение false — если нет.</p>
+            <p class="example">arr.includes(item, from)</p>
+
+            <h2>sort()</h2>
+            <p class="text">Метод выполняет сортировку массива в соответствии с условием, заданным переданной ему функцией. </p>
+            <p class="example">array.sort(function(firstValue, secondValue))</p>
+
+            <h2>filter()</h2>
+            <p class="text">Метод возвращает массив элементов, проверяя значения которых функция, переданная этому методу, возвратила true.</p>
+            <p class="example">var filteredArray = array.filter(function(currentValue, index, arr))</p>
+
+            <h2>forEach()</h2>
+            <p class="text">Метод позволяет запускать функцию для каждого элемента массива.</p>
+            <p class="example">arr.forEach(function(item, index, array) {//делать что-то с item})</p>
+
+            <h2>reduce()</h2>
+            <p class="text">Метод возвращает некое значение, представляющее собой результат обработки всех элементов массива.</p>
+            <p class="example">array.reduce(callback)</p>
+
+            <h2>reduceRight()</h2>
+            <p class="text">Позволяет вызвать функцию обратного вызова один раз для каждого элемента массива в порядке убывания индекса (справа-налево).</p>
+            <p class="example">array.reduceRight(callback)</p>
+
+            <h2>keys()</h2>
+            <p class="text">Возвращает новый итератор, который возвращает значения индексов массива.</p>
+            <p class="example">array.keys()</p>
+
+            <h2>isArray()</h2>
+            <p class="text">Определяет является ли значение массивом.</p>
+            <p class="example">Array.isArray(obj)</p>
+
+            <h2>copyWithin()</h2>
+            <p class="text">Позволяет скопировать элементы массива (в зависимости от их индекса) и вставить их в тот же массив, заменяя определенные элементы массива (в зависимости от их индекса), длина массива при этом не изменяется.</p>
+            <p class="example">array.copyWithin(target, start)</p>
+            
+            <h2>from()</h2>
+            <p class="text">Преобразует и возвращает новый массив из массивоподобного, или итерируемого объекта.</p>
+            <p class="example">var newArray = Array.from(arrayLike, function(currentValue, index))</p>
+
+            <h2>concat</h2>
+            <p class="text">Метод возвращает новый массив, состоящий из массива, на котором он был вызван, соединённого с другими массивами и/или значениями, переданными в качестве аргументов.</p>
+            <p class="example">arr.concat(arg1, arg2...)</p>
+
+            <h2>of()</h2>
+            <p class="text">Позволяет создать новый экземпляр массива, значения которого соответствует количеству переданных аргументов (независимо от их типа и числа).</p>
+            <p class="example">Array.of(element1, element2, ..., elementX)</p>
+        </div>
+        </div>
+        <div class="content__inner" id="tab-4">
+        <div class="page">
+            <h2>Работа с функциями</h2>
+            <p class="text">Локальные переменные</p>
+            <p class="example">function name() {let message = ...}</p>
+            <p class="text">Внешние переменные/Глобальные переменные</p>
+            <p class="example">let message = ...; function name() { }</p>
+            <p class="text">Возврат значения:</p>
+            <p class="example">function sum(a, b) { return a + b; }</p>
+
+            <h2>function Declaration (определение функции)</h2>
+            <p class="text">функция доступна на любой строке кода в нашей программе, т.к происходит hoisting(поднятие функций вверх)</p>
+            <p class="example">function имя(параметры) {...}</p>
+
+            <h2>function Expression (выржаение функции)</h2>
+            <p class="text">функция будет доступна ниже в коде, только после строки с объявлением функции в переменную.</p>
+            <p class="example">const f = function(параметры) {тело функции}</p>
+
+            <h2>Arrow Function (стрелочная функция)</h2>
+            <p class="text"> - имеет свойство как хойстин</p>
+            <p class="example">const ShowNumberArrow = function () => {console.log(1)}</p>
+            <p class="hint">const ShowNumberArrow = () => console.log(1) // сокращенная запись</p>
+            <p class="hint">let ShowNumber6 = (g) => {return g * 3} // если с {} то return</p>
+            <p class="hint">user.sayHi = () => console.log('hi') // все что перед = и есть название функции</p>
+
+            <h3>Анонимная стрелочная функция</h3>
+            <p class="text"></p>
+            <p class="example">newArray.forEach((element, index) => console.log(element[index]))</p>
+
+            <h2>Функции -«колбэки»</h2>
+            <p class="text"></p>
+            <p class="example">function ask(question, yes, no) {
+                //   if (confirm(question)) yes()
+                //   else no()}</p>
+
+            <h2>Циклы</h2>
+            <p class="text">«while» :</p>
+            <p class="example">while (condition) {код также называемый "телом цикла"}</p>
+            <p class="hint">Код из тела цикла выполняется, пока условие condition истинно.</p>
+
+            <p class="text">«do …while» :</p>
+            <p class="example">do {тело цикла} while (condition)</p>
+            <p class="hint">Цикл сначала выполнит тело, а затем проверит условие (condition),
+                //     и пока его значение равно true, он будет выполняться снова и снова.</p>
+
+            <p class="text">«for» :</p>
+            <p class="example">for (начало; условие; шаг) {... тело цикла ...}</p>
+            <p class="hint">Цикл for повторяет действия, пока не произойдёт какое-либо специальное событие завершения цикла.</p>
+            
+            <p class="text">«for…in» :</p>
+            <p class="example">for (key in object) {тело цикла выполняется для каждого свойства объекта}</p>
+            <p class="hint">Оператор for...in проходит по всем перечислимым свойствам объекта.</p>
+
+            <p class="text">«for... of» :</p>
+            <p class="example">for (variable of object) {выражения}</p>
+            <p class="hint">Оператор for...of создаёт цикл, проходящий по перечислимым объектам.</p>
+
+            <h2>Конструкция "switch"</h2>
+            <p class="text">Более наглядный способ сравнить выражение сразу с несколькими вариантами.</p>
+            <p class="example">
+    <pre>switch(x) {
+    case 'value1': // if (x === 'value1')
+        /n ...
+        [break]
+    case 'value2':  // if (x === 'value2')
+        ...
+        [break]
+    default:
+        ...<br>
+        [break]
+    }</pre>
+            </p>
+
+            <h2>Тернарный опертор</h2>
+            <p class="text">условие ? значение1 : значение2</p>
+            <p class="example">(age >= 18) ? access = true : access = false;</p>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
